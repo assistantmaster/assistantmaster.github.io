@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D-Druck</title>
+    <link rel="shortcut icon" href="./img/Anycubic-Kobra-2-Pro.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <script src="./script.js"></script>
+    <div class="header">
+        <a href="./index.html"><h1>3D-Druck</h1></a>
+        <div>
+            <button onclick="toggleMenu()" class="burger">
+                <span class="burger-6">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </span>
+            </button>
+        </div>
+        <div id="menu" class="navbar menu">
+            <a class="nav" href="./index.html">Home</a>
+            <a class="nav" href="./Druckverfahren.html">Druckverfahren</a>
+            <a class="nav" href="./Materialien.html">Materialien</a>
+            <a class="nav" href="./Dateiformate.html">Dateiformate</a>
+            <a class="nav" href="./Slicing.html">Slicing</a>
+        </div>
+    </div>
+    <div class="content">
+        <h2>Thermoplaste (FDM-Druck)</h2>
+        Thermoplaste sind die am häufigsten verwendeten Materialien im FDM-Druck und eignen sich für Prototypen, funktionale Teile oder einfache Modelle: <br>
+        <br>
+        <img src="./img/pla-bundle.png" class="bundle">
+        <ul class="materialien-liste">
+            <li><b>PLA (Polylactid):</b> Umweltfreundlich, biologisch abbaubar, einfach zu drucken, geringe Hitzebeständigkeit. Ideal für dekorative Objekte und Prototypen. </li> <br>
+            <li><b>ABS (Acrylnitril-Butadien-Styrol):</b> Robust, hitzebeständig und schlagfest, jedoch schwieriger zu drucken (benötigt beheiztes Druckbett). Häufig in technischen Anwendungen genutzt. </li> <br>
+            <li><b>PETG (Polyethylenterephthalat-Glykol):</b> Kombiniert die Festigkeit von ABS mit der Druckfreundlichkeit von PLA. Lebensmittelecht und chemikalienresistent. </li> <br>
+            <li><b>TPU/TPE (Thermoplastische Elastomere):</b> Flexibel, gummiartig, ideal für bewegliche oder stoßdämpfende Teile wie Dichtungen oder Handyhüllen. </li> <br>
+            <li><b>Nylon (Polyamid):</b> Stark, leicht und abriebfest, jedoch hygroskopisch (zieht Feuchtigkeit an). Wird oft in technischen Anwendungen eingesetzt. </li> <br>
+        </ul>
+    </div>
+    <div class="footer">
+        <a class="footer-links" href="./Impressum.html">Impressum</a>
+        <a class="footer-links" href="./Datenschutz.html">Datenschutz</a>
+        <p class="footer-links"><i>© by Timo Thoms</i></p>
+    </div>
+</body>
+</html>

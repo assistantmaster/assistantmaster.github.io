@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D-Druck</title>
+    <link rel="shortcut icon" href="./img/Anycubic-Kobra-2-Pro.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <script src="./script.js"></script>
+    <div class="header">
+        <a href="./index.html"><h1>3D-Druck</h1></a>
+        <div>
+            <button onclick="toggleMenu()" class="burger">
+                <span class="burger-6">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </span>
+            </button>
+        </div>
+        <div id="menu" class="navbar menu">
+            <a class="nav" href="./index.html">Home</a>
+            <a class="nav" href="./Druckverfahren.html">Druckverfahren</a>
+            <a class="nav" href="./Materialien.html">Materialien</a>
+            <a class="nav" href="./Dateiformate.html">Dateiformate</a>
+            <a class="nav" href="./Slicing.html">Slicing</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="infotext">
+            <p>Die Wahl des richtigen Dateiformats für den 3D-Druck hängt von den spezifischen Anforderungen des Projekts ab. STL ist das am weitesten verbreitete Format und eignet sich gut für einfache Modelle, unterstützt jedoch keine Farben oder Materialien. OBJ ist ideal für komplexere Modelle, da es Texturen und Materialien speichern kann, ist aber nicht mit allen Druckern kompatibel. 3MF bietet eine moderne Alternative, die neben Geometrie auch Druckeinstellungen, Farben und Materialien in einer Datei speichert, was den Druckprozess präziser und effizienter macht. AMF ist ein weiteres Format, das mehrere Materialien und Farben unterstützt, jedoch noch nicht so verbreitet ist. GCODE hingegen ist kein Modellformat, sondern enthält spezifische Anweisungen für den Drucker, basierend auf einem 3D-Modell. Insgesamt gibt es eine Vielzahl an Formaten, und die Wahl hängt davon ab, wie detailliert das Modell sein muss und welche zusätzlichen Informationen für den Druckprozess erforderlich sind.</p>
+        </div>
+        <ul>
+            <li>
+                <h2>STL (Stereolithography)</h2>
+                <p>Das STL-Format ist das am weitesten verbreitete Format im 3D-Druck. Es speichert ein 3D-Modell als eine Sammlung von Dreiecksflächen. Es wird von fast allen 3D-Druckern unterstützt, bietet jedoch keine Informationen zu Farben oder Materialien.</p>
+            </li>
+            <li>
+                <h2>OBJ (Wavefront Object)</h2>
+                <p>OBJ ermöglicht es, 3D-Modelle mit detaillierten Informationen zu speichern, einschließlich Texturen und Materialien. Es wird vor allem für visuell komplexe Modelle genutzt, ist jedoch nicht immer mit allen Druckern kompatibel und kann größere Dateigrößen erzeugen.</p>
+            </li>
+            <li>
+                <h2>3MF (3D Manufacturing Format)  </h2>
+                <p>3MF ist ein modernes Format, das Geometrie, Farben, Materialien und Druckeinstellungen in einer Datei speichert. Es bietet eine präzisere Steuerung des Druckprozesses und wächst zunehmend in der Industrie, wird jedoch noch nicht von allen Druckern vollständig unterstützt.</p>
+            </li>
+            <li>
+                <h2>AMF (Additive Manufacturing File Format)</h2>
+                <p>AMF ist ein offenes Format, das erweiterte Funktionen bietet, wie die Unterstützung mehrerer Materialien und Farben. Es ist effizienter als STL und speichert genauere Modellinformationen, hat jedoch eine geringere Verbreitung als STL und OBJ.</p>
+            </li>
+            <li>
+                <h2>GCODE</h2>
+                <p>GCODE ist das Standardformat für die Steuerung von 3D-Druckern. Es enthält detaillierte Anweisungen für den Druckprozess, wie Bewegung der Druckkopf-Achsen, Extrusion von Material und Temperatureinstellungen. GCODE wird nicht für die Modellierung selbst verwendet, sondern für die Durchführung des Druckvorgangs. Jede 3D-Drucker-Slicing-Software generiert GCODE-Dateien aus 3D-Modellen, die dann an den Drucker gesendet werden.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <a class="footer-links" href="./Impressum.html">Impressum</a>
+        <a class="footer-links" href="./Datenschutz.html">Datenschutz</a>
+        <p class="footer-links"><i>© by Timo Thoms</i></p>
+    </div>
+</body>
+</html>

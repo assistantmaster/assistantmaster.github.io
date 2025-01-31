@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D-Druck</title>
+    <link rel="shortcut icon" href="./img/Anycubic-Kobra-2-Pro.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <script src="./script.js"></script>
+    <div class="header">
+        <a href="./index.html"><h1>3D-Druck</h1></a>
+        <div>
+            <button onclick="toggleMenu()" class="burger">
+                <span class="burger-6">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </span>
+            </button>
+        </div>
+        <div id="menu" class="navbar menu">
+            <a class="nav" href="./index.html">Home</a>
+            <a class="nav" href="./Druckverfahren.html">Druckverfahren</a>
+            <a class="nav" href="./Materialien.html">Materialien</a>
+            <a class="nav" href="./Dateiformate.html">Dateiformate</a>
+            <a class="nav" href="./Slicing.html">Slicing</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="verfahren">
+            <h1>FDM</h1>
+            <div class="druckverfahren">
+                <p class="verfahreninfo">
+                    FDM (Fused Deposition Modeling) ist ein populales 3D-Druckverfahren, das vor allem in der Prototypenentwicklung und der Kleinserienproduktion eingesetzt wird. Bei diesem Verfahren wird ein Kunststofffilament, typischerweise PLA, ABS oder PETG, in einem beheizten Extruder erhitzt und schichtweise aufgetragen, um das gewünschte Objekt aufzubauen. Der Druckkopf bewegt sich dabei in zwei Dimensionen (X und Y), während die Druckplattform in der Z-Achse nach unten sinkt, um jede neue Schicht zu platzieren. <br>
+                    <br>
+                    FDM-Drucker sind besonders bekannt für ihre Benutzerfreundlichkeit und Kosteneffizienz, was sie sowohl für Hobbyisten als auch für professionelle Anwendungen attraktiv macht. Sie ermöglichen die Herstellung von robusten, funktionalen Bauteilen, die eine hohe Detailgenauigkeit aufweisen. Die Qualität des Endprodukts hängt von Faktoren wie der Druckgeschwindigkeit, der Schichthöhe und der Materialwahl ab. FDM wird oft für Anwendungen genutzt, bei denen schnelle Prototypenerstellung, Testläufe oder kostengünstige Kleinserienproduktion erforderlich sind. <br>
+                    <br>
+                    Insgesamt bietet der FDM-Druck eine kostengünstige, zugängliche Möglichkeit, Objekte schnell und effizient zu erstellen, wobei die Vielfalt an verwendbaren Materialien kontinuierlich wächst und immer neue Möglichkeiten erschließt.
+                </p>
+                <img class="verfahrenbild" src="./img/Anycubic-Kobra-2-Pro.png">
+            </div>
+        </div>
+        <div class="verfahren">
+            <h1>SLA</h1>
+            <div class="druckverfahren">
+                <img class="verfahrenbild" src="./img/Anycubic-Photon-Mono-M5s-Pro.png">
+                <p class="verfahreninfo">
+                    SLA-Drucker, auch Stereolithografie-Drucker genannt, gehören zu den präzisesten 3D-Drucktechnologien. Sie arbeiten mit flüssigem Resin, das durch eine Lichtquelle, meist einen Laser oder UV-Licht, schichtweise ausgehärtet wird. Dabei entstehen Modelle mit extrem feinen Details und glatten Oberflächen. SLA-Drucker sind ideal für Anwendungen wie Schmuckdesign, Zahnmedizin und Prototypenbau, bei denen höchste Genauigkeit gefragt ist. <br>
+                    <br>
+                    Der Druckprozess beginnt mit einem Harztank, in dem das Material gezielt belichtet wird. Nach jeder Schicht senkt sich die Bauplattform, sodass das Objekt Schicht für Schicht aufgebaut wird. Nach dem Druck ist eine Nachbearbeitung notwendig, bei der das Objekt gereinigt und unter UV-Licht weiter ausgehärtet wird. <br>
+                    <br>
+                    Zu den Vorteilen zählen die hohe Detailgenauigkeit, nahezu unsichtbare Schichten und eine breite Auswahl an Resins mit speziellen Eigenschaften wie Flexibilität oder Biokompatibilität. Nachteile sind die vergleichsweise hohen Kosten und der zusätzliche Aufwand bei der Nachbearbeitung. Trotz dieser Herausforderungen sind SLA-Drucker eine exzellente Wahl für Projekte, die präzise und ästhetisch hochwertige Ergebnisse erfordern. <br>
+                </p>
+            </div>
+        </div>
+        <div class="verfahren">
+            <h1>SLS</h1>
+            <div class="druckverfahren">
+                <p class="verfahreninfo">
+                    Der SLS-Druck (Selektives Lasersintern) ist ein 3D-Druckverfahren, bei dem pulverförmiges Material, meist Nylon oder andere Polymere, durch einen Laser Schicht für Schicht verschmolzen wird. Der Laser erhitzt gezielt die Bereiche, die zum Bauteil gehören, während das übrige Pulver als Stützmaterial dient. Dadurch können komplexe Geometrien ohne zusätzliche Stützstrukturen hergestellt werden. <br>
+                    <br>
+                    Der Prozess beginnt mit einer dünnen Pulverschicht, die auf die Bauplattform aufgetragen wird. Ein Laser sintert die gewünschten Bereiche, und die Plattform senkt sich, um Platz für die nächste Schicht zu schaffen. Das überschüssige Pulver bleibt liegen und kann oft recycelt werden. <br>
+                    <br>
+                    SLS bietet zahlreiche Vorteile: Es ermöglicht komplexe, funktionale Designs und erzeugt robuste, langlebige Teile, die häufig ohne weitere Nachbearbeitung direkt genutzt werden können. Typische Anwendungen sind Prototypenbau, Automobilindustrie, Luftfahrt und Medizintechnik. <br>
+                    <br>
+                    Zu den Nachteilen gehören die hohen Kosten für Geräte und Materialien sowie der zeitaufwändige Druckprozess. Trotzdem ist SLS wegen seiner Präzision und Vielseitigkeit besonders für industrielle und technische Projekte unverzichtbar. <br>
+                </p>
+                <img class="verfahrenbild" src="./img/Fuse-1+-30W.png">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a class="footer-links" href="./Impressum.html">Impressum</a>
+        <a class="footer-links" href="./Datenschutz.html">Datenschutz</a>
+        <p class="footer-links"><i>© by Timo Thoms</i></p>
+    </div>
+</body>
+</html>

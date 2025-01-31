@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D-Druck</title>
+    <link rel="shortcut icon" href="./img/Anycubic-Kobra-2-Pro.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <script src="./script.js"></script>
+    <div class="header">
+        <a href="./index.html"><h1>3D-Druck</h1></a>
+        <div>
+            <button onclick="toggleMenu()" class="burger">
+                <span class="burger-6">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </span>
+            </button>
+        </div>
+        <div id="menu" class="navbar menu">
+            <a class="nav" href="./index.html">Home</a>
+            <a class="nav" href="./Druckverfahren.html">Druckverfahren</a>
+            <a class="nav" href="./Materialien.html">Materialien</a>
+            <a class="nav" href="./Dateiformate.html">Dateiformate</a>
+            <a class="nav" href="./Slicing.html">Slicing</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="infotext">
+            <h2>Slicing: Der Schlüssel zum erfolgreichen 3D-Druck</h2>
+            <p>
+                Beim 3D-Druck ist das Slicing ein unerlässlicher Schritt, der den Übergang von einem digitalen 3D-Modell zum druckbaren Objekt ermöglicht. Dieser Prozess zerlegt das Modell in dünne horizontale Schichten und generiert aus den Schichtinformationen G-Code, der die Anweisungen für den 3D-Drucker enthält. Ohne Slicing könnte der Drucker das Modell nicht korrekt umsetzen. <br>
+                <br>
+                In der Regel erfolgt das Slicing mithilfe spezieller Software, die es ermöglicht, zahlreiche Druckparameter zu steuern. Zu den wichtigsten Einstellungen gehören die Schichthöhe, die das Detailniveau und die Druckzeit beeinflusst, sowie die Füllungsdichte (Infill), die angibt, wie viel Material im Inneren des Objekts verwendet wird. Auch die Druckgeschwindigkeit, die Temperatur des Extruders und des Druckbetts sowie die Unterstützung von Überhängen durch Support-Strukturen lassen sich im Slicer individuell anpassen. <br>
+                <br>
+                Ein gut optimiertes Slicing sorgt nicht nur für eine hohe Druckqualität, sondern kann auch die Druckzeit verkürzen und Material sparen. Fortgeschrittene Funktionen in Slicing-Programmen wie Ultimaker Cura oder PrusaSlicer ermöglichen eine feine Abstimmung der Druckparameter, etwa für mehrfarbige Drucke oder komplexe Geometrien. <br>
+                <br>
+                Das Slicing hat also großen Einfluss auf das Endergebnis. Fehler oder suboptimale Einstellungen können zu fehlerhaften Drucken führen, die entweder unbrauchbar oder strukturell schwach sind. Daher ist es wichtig, sich mit den Slicing-Software und deren Funktionen vertraut zu machen, um das Potenzial des 3D-Druckers voll auszuschöpfen. <br>
+                <br>
+                <br>
+                <b>Hier ein paar Slicer mit ihren Funktionen:</b>
+            </p>
+        </div>
+        <br>
+        <br>
+        <p>
+            <ol>
+                <h2><li>
+                    PrusaSlicer </h2> 
+                    PrusaSlicer ist ein Open-Source-Slicer von Prusa Research, der sowohl für Prusa-Drucker als auch für andere Modelle geeignet ist. Er bietet umfangreiche Funktionen wie Multi-Material-Druck und detaillierte Anpassungsmöglichkeiten. Die benutzerfreundliche Oberfläche macht ihn für Anfänger und Fortgeschrittene attraktiv. Regelmäßige Updates verbessern kontinuierlich die Leistung. <br>
+                    <img src="./img/prusa-slicer.png" class="bundle">
+                </li>
+                <h2><li>
+                    OrcaSlicer </h2>  
+                    OrcaSlicer basiert auf PrusaSlicer und ist speziell für Bambu Labs-Drucker entwickelt. Es unterstützt Multi-Material-Druck und die Integration mit Bambu Labs' AMS (Automatic Material System). OrcaSlicer bietet benutzerfreundliche Funktionen und erweiterte Anpassungen für eine optimale Druckqualität. Besonders nützlich für Nutzer von Bambu-Druckern. <br>
+                    <img src="./img/orca-slicer.png" class="bundle">
+                </li>
+                <h2><li>
+                    Cura Slicer </h2>  
+                    Cura ist ein weit verbreiteter, benutzerfreundlicher Open-Source-Slicer, der viele 3D-Drucker unterstützt. Er bietet umfangreiche Anpassungsmöglichkeiten für Druckparameter und eine große Auswahl an voreingestellten Profilen. Cura ist besonders für Anfänger geeignet und bleibt durch regelmäßige Updates immer auf dem neuesten Stand. Kostenlos und einfach zu bedienen. <br>
+                    <img src="./img/cura-slicer.png" class="bundle">
+                </li>
+                <h2><li>
+                    Anycubic Slicer </h2>
+                    Anycubic Slicer ist speziell für Anycubic-Drucker entwickelt und bietet eine benutzerfreundliche Oberfläche. Er basiert auf Cura und bietet vorgefertigte Profile für die gängigen Anycubic-Modelle. Der Slicer ermöglicht die Anpassung grundlegender Druckparameter wie Schichthöhe und Geschwindigkeit. Ideal für Einsteiger, die unkomplizierte Ergebnisse erzielen möchten. <br>
+                    <img src="./img/anycubic-slicer.jpg" class="bundle">
+                </li>
+                <h2><li>
+                    Bambu Studio </h2> 
+                    Bambu Studio wurde für Bambu Labs-Drucker entwickelt, insbesondere für den Multi-Material-Druck mit dem AMS-System. Es bietet fortschrittliche Funktionen zur Materialverwaltung und -überwachung. Die Software hat eine einfache Benutzeroberfläche und ermöglicht die Integration von Cloud-Diensten. Besonders gut geeignet für komplexe Druckvorgänge mit mehreren Materialien. <br>
+                    <img src="./img/bambu-studio.png" class="bundle">
+                </li>
+            </ol>
+            
+        </p>
+    </div>
+    <div class="footer">
+        <a class="footer-links" href="./Impressum.html">Impressum</a>
+        <a class="footer-links" href="./Datenschutz.html">Datenschutz</a>
+        <p class="footer-links"><i>© by Timo Thoms</i></p>
+    </div>
+</body>
+</html>
