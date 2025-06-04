@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Spotify</h1> <br>
+        <div class="sidebar-album" onclick="showHome()">
+            <i class="fas fa-book" style="width:32px;text-align:center;font-size:20px;color:#1DB954"></i>
+            <span>Your Library</span>
+        </div>
+        <div class="sidebar-album" onclick="showLikedSongs()">
+            <i class="fas fa-heart" style="width:32px;text-align:center;font-size:20px;color:#1DB954"></i>
+            <span>Liked Songs</span>
+        </div>
+        <div class="sidebar-albums" id="sidebarAlbums"></div>
+    </div>
+
+    <div class="main" id="mainContent">
+        <h1>Albums</h1>
+        <div class="albums" id="albumList"></div>
+    </div>
+
+    <div class="player" id="player">
+        <div class="player-top">
+            <div class="track-display">
+                <img src="" alt="cover" id="trackCover">
+                <div>
+                    <div class="track-title" id="trackTitle">No song playing</div>
+                    <div class="track-artist" id="trackArtist"></div>
+                </div>
+            </div>
+            <div class="controls">
+                <button onclick="prevTrack()"><i class="fas fa-step-backward"></i></button>
+                <button onclick="togglePlay()" id="playBtn"><i class="fas fa-play"></i></button>
+                <button onclick="nextTrack()"><i class="fas fa-step-forward"></i></button>
+            </div>
+        </div>
+        <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+    </div>
+
+    <audio id="audio" preload="metadata"></audio>
+
+    <script src="./script.js"></script>
+</body>
+</html>
