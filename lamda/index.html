@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotify Clone</title>
+    <title>Spotify</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.svg">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -46,6 +47,38 @@
     </div>
 
     <audio id="audio" preload="metadata"></audio>
+
+    <!-- Mobile Playlist View -->
+    <div class="mobile-playlist" id="mobilePlaylist">
+        <div class="mobile-header">
+            <img src="./images/1748968955733.jpg" alt="Playlist Cover" id="mobilePlaylistCover">
+            <div class="mobile-title" id="mobilePlaylistTitle">Playlist</div>
+            <div class="mobile-meta">
+                <span id="mobilePlaylistOwner">Lamda</span>
+                <span>·</span>
+                <span id="mobilePlaylistCount">0 Songs</span>
+            </div>
+        </div>
+        <div class="mobile-song-list" id="mobileSongList"></div>
+        <div class="mobile-bottom-player" id="mobileBottomPlayer" style="display:none;">
+            <img src="" alt="" id="mobileBottomCover">
+            <div style="flex:1; min-width:0;">
+                <div class="mobile-bottom-title" id="mobileBottomTitle" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"></div>
+                <div class="mobile-bottom-artist" id="mobileBottomArtist" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"></div>
+                <input type="range" id="mobileBottomProgress" min="0" max="100" value="0" style="width:100%;margin-top:4px;">
+            </div>
+            <div class="mobile-bottom-controls" style="display:flex;flex-direction:row;gap:8px;align-items:center;margin-left:8px;">
+                <i class="fa fa-step-backward" id="mobilePrev"></i>
+                <i class="fa fa-play" id="mobilePlay"></i>
+                <i class="fa fa-step-forward" id="mobileNext"></i>
+            </div>
+        </div>
+        <div class="mobile-nav-bar">
+            <a class="nav-item" onclick="showHome()"><i class="fa fa-book"></i>Library</a>
+            <a class="nav-item" onclick="showLikedSongs()"><i class="fa fa-heart"></i>Liked</a>
+            <a class="nav-item" onclick="showLikedSongs()"><i class="fa fa-search"></i>Search</a>
+        </div>
+    </div>
 
     <script src="./script.js"></script>
 </body>
