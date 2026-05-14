@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einladung</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.shopify.com/s/files/1/1061/1924/products/4_1024x1024.png?v=1571606116">
+    <style>
+        @font-face {
+            font-family: 'MinecraftHeading';
+            src: url("./minecraft_regular.ttf") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        :root {
+            --accent: #00f2fe;
+            --bg-deep: #05070a;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-deep);
+            color: #fff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .bg-glow {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 20% 30%, rgba(0, 242, 254, 0.15) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(79, 172, 254, 0.15) 0%, transparent 40%);
+            filter: blur(80px);
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            font-family: 'MinecraftHeading', sans-serif;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 12vw, 7rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 0.9;
+            background: linear-gradient(135deg, #fff 30%, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            color: var(--accent);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+
+        .info-table { display: table; width: 100%; border-collapse: separate; border-spacing: 20px; }
+        .info-cell {
+            display: table-cell;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            vertical-align: top;
+            width: 33%;
+        }
+        .info-cell h3 { margin: 15px 0 10px 0; }
+
+        /* Countdown */
+        .countdown {
+            text-align: center;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 40px 20px;
+            margin-bottom: 60px;
+            display: table;
+            width: 100%;
+        }
+        .countdown-inner { display: table-row; }
+        .countdown-unit { display: table-cell; padding: 0 20px; }
+        .countdown-num {
+            display: block;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 900;
+            color: var(--accent);
+            font-variant-numeric: tabular-nums;
+        }
+        .countdown-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.5;
+        }
+        .countdown-sep {
+            display: table-cell;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent);
+            opacity: 0.3;
+            vertical-align: top;
+            padding-top: 5px;
+        }
+
+        /* Maps */
+        .map-wrapper {
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-bottom: 60px;
+        }
+        .map-wrapper iframe {
+            display: block;
+            width: 100%;
+            height: 400px;
+            border: none;
+            filter: invert(90%) hue-rotate(180deg);
+        }
+
+        /* Calendar Buttons */
+        .cal-buttons { display: table; width: 100%; border-collapse: separate; border-spacing: 15px; margin-bottom: 60px; }
+        .cal-btn { display: table-cell; text-align: center; }
+        .cal-btn a {
+            display: block;
+            padding: 16px 10px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .cal-btn a:hover { border-color: var(--accent); color: var(--accent); }
+        .cal-icon { display: block; font-size: 1.8rem; margin-bottom: 8px; }
+
+        .rsvp-section {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(to bottom, transparent, rgba(0, 242, 254, 0.05));
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 20px 60px;
+            background: var(--accent);
+            color: #000;
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 100px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .info-cell { display: block; width: 100%; margin-bottom: 20px; }
+            .info-table { display: block; }
+            .countdown-unit { padding: 0 10px; }
+            .cal-btn { display: block; width: 100%; margin-bottom: 10px; }
+            .cal-buttons { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg-glow"></div>
+
+<header>
+    <p class="hero-subtitle">Du bist eingeladen zu</p>
+    <h1 class="hero-title">Timos Geburtstag</h1>
+    <div class="scroll-indicator">Entdecke das Event ↓</div>
+</header>
+
+<section id="details">
+    <h2>Hard Facts</h2>
+    <div class="info-table">
+        <div class="info-cell">
+            <span style="font-size: 2rem;">📅</span>
+            <h3>Wann</h3>
+            <p>30. Mai 2026<br>Einlass ab 14:00 Uhr</p>
+        </div>
+        <div class="info-cell">
+            <span style="font-size: 2rem;">📍</span>
+            <h3>Wo</h3>
+            <p>Bei mir<br>Feldrosenweg 21, <br> 50259 Pulheim</p>
+        </div>
+        <div class="info-cell">
+            <span style="font-size: 2rem;">⛺</span>
+            <h3>Was</h3>
+            <p>Übernachtung im Zelt</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Countdown</h2>
+    <div class="countdown">
+        <div class="countdown-inner">
+            <div class="countdown-unit">
+                <span class="countdown-num" id="cd-days">--</span>
+                <span class="countdown-label">Tage</span>
+            </div>
+            <div class="countdown-sep">:</div>
+            <div class="countdown-unit">
+                <span class="countdown-num" id="cd-hours">--</span>
+                <span class="countdown-label">Stunden</span>
+            </div>
+            <div class="countdown-sep">:</div>
+            <div class="countdown-unit">
+                <span class="countdown-num" id="cd-mins">--</span>
+                <span class="countdown-label">Minuten</span>
+            </div>
+            <div class="countdown-sep">:</div>
+            <div class="countdown-unit">
+                <span class="countdown-num" id="cd-secs">--</span>
+                <span class="countdown-label">Sekunden</span>
+            </div>
+        </div>
+    </div>
+
+    <h2>Location</h2>
+    <div class="map-wrapper">
+        <!-- Ersetze die src mit dem echten Google Maps Embed-Link deiner Location -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10048.834826081442!2d6.785577551745593!3d50.9753327859713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf39e5f4e76e73%3A0xd36fc08d631c89a2!2sFeldrosenweg%2021%2C%2050259%20Pulheim!5e0!3m2!1sde!2sde!4v1745749737022!5m2!1sde!2sde"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <h2>In Kalender eintragen</h2>
+    <div class="cal-buttons">
+        <div class="cal-btn">
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Timos+Geburtstag&dates=20260530T140000/20260531T120000&Details=Timos+Geburtstag&location=Feldrosenweg+21%2C+50259+Pulheim" target="_blank" rel="noopener">
+                <span class="cal-icon">📅</span>Google Calendar
+            </a>
+        </div>
+        <div class="cal-btn">
+            <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20260530T140000%0ADTEND:20260531T120000%0ASUMMARY:Timos%20Geburtstag%0ALOCATION:Feldrosenweg%2021%2C%2050259%20Pulheim%0AEND:VEVENT%0AEND:VCALENDAR" download="timos_geburtstag.ics">
+                <span class="cal-icon">🤮</span>Apple / iCal (.ics)
+            </a>
+        </div>
+        <div class="cal-btn">
+            <a href="https://outlook.live.com/calendar/0/deeplink/compose?subject=Timos+Geburtstag&startdt=2026-05-30T14:00:00&enddt=2026-05-31T12:00:00&location=Feldrosenweg+21%2C+50259+Pulheim" target="_blank" rel="noopener">
+                <span class="cal-icon">🪟</span>Outlook
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="rsvp-section">
+    <h2 style="border: none; padding: 0;">Bist du bereit?</h2>
+    <p style="margin-bottom: 40px; opacity: 0.8;">Bitte gib mir Bescheid, ob du dabei bist.</p>
+    <a href="https://wa.me/4915903798566/?text=Ich kann zu deinem Geburtstag kommen!" class="btn">Zusage bestätigen</a>
+</section>
+
+<script>
+    const target = new Date('2026-05-30T14:00:00');
+    function tick() {
+        const diff = target - Date.now();
+        if (diff <= 0) {
+            document.querySelector('.countdown').innerHTML = '<p style="color:var(--accent);font-size:2rem;font-weight:900;padding:20px;">🎉 Es ist soweit!</p>';
+            return;
+        }
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        document.getElementById('cd-days').textContent  = String(d).padStart(2, '0');
+        document.getElementById('cd-hours').textContent = String(h).padStart(2, '0');
+        document.getElementById('cd-mins').textContent  = String(m).padStart(2, '0');
+        document.getElementById('cd-secs').textContent  = String(s).padStart(2, '0');
+    }
+    tick();
+    setInterval(tick, 1000);
+</script>
+
+</body>
+</html>
